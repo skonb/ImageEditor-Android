@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA,Manifest.permission.READ_EXTERNAL_STORAGE},
+                    new String[]{Manifest.permission.CAMERA, Manifest.permission.READ_EXTERNAL_STORAGE},
                     REQUEST_PERMISSON_CAMERA);
             return;
         }
@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             File photoFile = FileUtils.genEditFile();
             // Continue only if the File was successfully created
             if (photoFile != null) {
-                photoURI = Uri.fromFile(photoFile);
+                photoURI = FileProvider.getUriForFile(this, getApplicationContext().getPackageName() + ".imageeditor.provider", photoFile);
+//                photoURI = Uri.fromFile(photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, TAKE_PHOTO_CODE);
             }
@@ -135,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void editImageClick() {
         File outputFile = FileUtils.genEditFile();
-        EditImageActivity.start(this,path,outputFile.getAbsolutePath(),ACTION_REQUEST_EDITIMAGE);
+        EditImageActivity.start(this, path, outputFile.getAbsolutePath(), ACTION_REQUEST_EDITIMAGE);
     }
 
     /**
@@ -218,10 +219,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String newFilePath = data.getStringExtra(EditImageActivity.EXTRA_OUTPUT);
         boolean isImageEdit = data.getBooleanExtra(EditImageActivity.IMAGE_IS_EDIT, false);
 
-        if (isImageEdit){
+        if (isImageEdit) {
             Toast.makeText(this, getString(R.string.save_path, newFilePath), Toast.LENGTH_LONG).show();
-        }else{//未编辑  还是用原来的图片
-            newFilePath = data.getStringExtra(EditImageActivity.FILE_PATH);;
+        } else {//未编辑  还是用原来的图片
+            newFilePath = data.getStringExtra(EditImageActivity.FILE_PATH);
+            ;
         }
         //System.out.println("newFilePath---->" + newFilePath);
         //File file = new File(newFilePath);

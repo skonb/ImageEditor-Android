@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">ImageEditLibrary</string>
+    <string name="no_images">画像が見つかりませんでした</string>
+    <string name="images">%d 枚の画像</string>
+    <string name="save">保存</string>
+    <string name="apply">適用する</string>
+
+    <string name="stickers">スタンプ</string>
+    <string name="filter">フィルター</string>
+    <string name="crop">クロップ</string>
+    <string name="rotate">回転</string>
+    <string name="text">テキスト</string>
+    <string name="edit">編集　</string>
+
+
+
+    <string name="materialcolorpicker__app_name">Android Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__descLib">Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__errHex">Hex Code Format incorrect</string>
+    <string name="materialcolorpicker__inputColor">Color:</string>
+    <string name="materialcolorpicker__btnSelectColor">Select</string>
+    <string name="saving_image">保存しています...</string>
+    <string name="input_hint">テキストを入力して下さい...</string>
+
+    <string name="no_choose">画像を選択して下さい</string>
+    <string name="auto_newline">自動で改行</string>
+    <string name="save_error">保存時にエラーが発生しました</string>
+    <string name="handing">ロードしています...</string>
+
+    <string-array name="filters">
+        <item>オリジナル</item>
+        <item>ソフト</item>
+        <item>ブラック</item>
+        <item>クラシック</item>
+        <item>ゴージャス</item>
+        <item>レトロ</item>
+        <item>優雅</item>
+        <item>映画</item>
+        <item>記憶</item>
+        <item>ヨーグルト</item>
+        <item>儚げ</item>
+        <item>シャイン</item>
+    </string-array>
+
+    <string name="more">更に表示</string>
+    <string name="exit_without_save">編集後の画像は保存されていません。終了してもよろしいですか？ </string>
+    <string name="confirm">OK</string>
+    <string name="cancel">キャンセル</string>
+
+    <string name="beauty">美肌</string>
+    <string name="smooth">スムーズ</string>
+    <string name="white_skin">美白</string>
+</resources>
