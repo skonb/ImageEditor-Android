@@ -221,8 +221,6 @@ public class EditImageActivity extends BaseActivity {
             switch (index) {
                 case MainMenuFragment.INDEX:// 主菜单
                     return mMainMenuFragment;
-                case StickerFragment.INDEX:// 贴图
-                    return mStickerFragment;
                 case FilterListFragment.INDEX:// 滤镜
                     return mFilterListFragment;
                 case CropFragment.INDEX://剪裁
@@ -241,7 +239,7 @@ public class EditImageActivity extends BaseActivity {
 
         @Override
         public int getCount() {
-            return 8;
+            return 7;
         }
     }// end inner class
 
@@ -394,7 +392,7 @@ public class EditImageActivity extends BaseActivity {
 
         if (mainBitmap == null || mainBitmap != newBit) {
             if (needPushUndoStack) {
-                mRedoUndoController.switchMainBit(mainBitmap,newBit);
+                mRedoUndoController.switchMainBit(mainBitmap, newBit);
                 increaseOpTimes();
             }
             mainBitmap = newBit;
