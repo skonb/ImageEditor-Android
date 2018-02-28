@@ -379,6 +379,7 @@ public class EditImageActivity extends BaseActivity {
         }
 
         mSaveImageTask = new SaveImageTask();
+
         mSaveImageTask.execute(mainBitmap);
     }
 
@@ -430,13 +431,14 @@ public class EditImageActivity extends BaseActivity {
         return isBeenSaved || mOpTimes == 0;
     }
 
+
     protected void onSaveTaskDone() {
         Intent returnIntent = new Intent();
         returnIntent.putExtra(FILE_PATH, filePath);
         returnIntent.putExtra(EXTRA_OUTPUT, saveFilePath);
         returnIntent.putExtra(IMAGE_IS_EDIT, mOpTimes > 0);
 
-        FileUtil.ablumUpdate(this, saveFilePath);
+//        FileUtil.ablumUpdate(this, saveFilePath);
         setResult(RESULT_OK, returnIntent);
         finish();
     }
