@@ -39,7 +39,6 @@ import java.util.List;
  * @author panyi
  */
 public class StickerFragment extends BaseEditFragment {
-    public static final int INDEX = ModuleConfig.INDEX_STICKER;
 
     public static final String TAG = StickerFragment.class.getName();
     public static final String STICKER_FOLDER = "stickers";

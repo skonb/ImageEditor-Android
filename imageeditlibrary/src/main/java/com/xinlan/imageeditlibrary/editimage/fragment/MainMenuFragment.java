@@ -101,7 +101,7 @@ public class MainMenuFragment extends BaseEditFragment implements View.OnClickLi
      * @author panyi
      */
     private void onStickClick() {
-        activity.bottomGallery.setCurrentItem(StickerFragment.INDEX);
+//        activity.bottomGallery.setCurrentItem(StickerFragment.INDEX);
         activity.mStickerFragment.onShow();
     }
 
